@@ -38,12 +38,21 @@
             this.T_APELLIDO = new System.Windows.Forms.TextBox();
             this.B_GUARDAR = new System.Windows.Forms.Button();
             this.B_ELIMINAR = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.RB_HOMBRE = new System.Windows.Forms.RadioButton();
+            this.RB_MUJER = new System.Windows.Forms.RadioButton();
+            this.CB_NARANJA = new System.Windows.Forms.CheckBox();
+            this.CB_VISA = new System.Windows.Forms.CheckBox();
+            this.CB_MASTERCARD = new System.Windows.Forms.CheckBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // L_DNI
             // 
             this.L_DNI.AutoSize = true;
-            this.L_DNI.Location = new System.Drawing.Point(114, 99);
+            this.L_DNI.Location = new System.Drawing.Point(21, 87);
             this.L_DNI.Name = "L_DNI";
             this.L_DNI.Size = new System.Drawing.Size(26, 13);
             this.L_DNI.TabIndex = 0;
@@ -52,7 +61,7 @@
             // L_NOMBRE
             // 
             this.L_NOMBRE.AutoSize = true;
-            this.L_NOMBRE.Location = new System.Drawing.Point(114, 154);
+            this.L_NOMBRE.Location = new System.Drawing.Point(21, 130);
             this.L_NOMBRE.Name = "L_NOMBRE";
             this.L_NOMBRE.Size = new System.Drawing.Size(44, 13);
             this.L_NOMBRE.TabIndex = 1;
@@ -61,7 +70,7 @@
             // L_APELLIDO
             // 
             this.L_APELLIDO.AutoSize = true;
-            this.L_APELLIDO.Location = new System.Drawing.Point(114, 215);
+            this.L_APELLIDO.Location = new System.Drawing.Point(21, 175);
             this.L_APELLIDO.Name = "L_APELLIDO";
             this.L_APELLIDO.Size = new System.Drawing.Size(44, 13);
             this.L_APELLIDO.TabIndex = 2;
@@ -70,7 +79,7 @@
             // L_NYA
             // 
             this.L_NYA.AutoSize = true;
-            this.L_NYA.Location = new System.Drawing.Point(131, 29);
+            this.L_NYA.Location = new System.Drawing.Point(25, 27);
             this.L_NYA.Name = "L_NYA";
             this.L_NYA.Size = new System.Drawing.Size(91, 13);
             this.L_NYA.TabIndex = 3;
@@ -80,7 +89,7 @@
             // 
             this.L_ELIMINAR.AutoSize = true;
             this.L_ELIMINAR.ForeColor = System.Drawing.Color.Red;
-            this.L_ELIMINAR.Location = new System.Drawing.Point(280, 29);
+            this.L_ELIMINAR.Location = new System.Drawing.Point(166, 27);
             this.L_ELIMINAR.Name = "L_ELIMINAR";
             this.L_ELIMINAR.Size = new System.Drawing.Size(50, 13);
             this.L_ELIMINAR.TabIndex = 4;
@@ -88,7 +97,7 @@
             // 
             // T_DNI
             // 
-            this.T_DNI.Location = new System.Drawing.Point(253, 99);
+            this.T_DNI.Location = new System.Drawing.Point(137, 80);
             this.T_DNI.Name = "T_DNI";
             this.T_DNI.Size = new System.Drawing.Size(100, 20);
             this.T_DNI.TabIndex = 5;
@@ -96,7 +105,7 @@
             // 
             // T_NOMBRE
             // 
-            this.T_NOMBRE.Location = new System.Drawing.Point(253, 151);
+            this.T_NOMBRE.Location = new System.Drawing.Point(137, 123);
             this.T_NOMBRE.Name = "T_NOMBRE";
             this.T_NOMBRE.Size = new System.Drawing.Size(100, 20);
             this.T_NOMBRE.TabIndex = 6;
@@ -104,7 +113,7 @@
             // 
             // T_APELLIDO
             // 
-            this.T_APELLIDO.Location = new System.Drawing.Point(253, 212);
+            this.T_APELLIDO.Location = new System.Drawing.Point(137, 168);
             this.T_APELLIDO.Name = "T_APELLIDO";
             this.T_APELLIDO.Size = new System.Drawing.Size(100, 20);
             this.T_APELLIDO.TabIndex = 7;
@@ -112,7 +121,7 @@
             // 
             // B_GUARDAR
             // 
-            this.B_GUARDAR.Location = new System.Drawing.Point(117, 290);
+            this.B_GUARDAR.Location = new System.Drawing.Point(24, 216);
             this.B_GUARDAR.Name = "B_GUARDAR";
             this.B_GUARDAR.Size = new System.Drawing.Size(75, 23);
             this.B_GUARDAR.TabIndex = 8;
@@ -122,7 +131,7 @@
             // 
             // B_ELIMINAR
             // 
-            this.B_ELIMINAR.Location = new System.Drawing.Point(266, 290);
+            this.B_ELIMINAR.Location = new System.Drawing.Point(151, 216);
             this.B_ELIMINAR.Name = "B_ELIMINAR";
             this.B_ELIMINAR.Size = new System.Drawing.Size(75, 23);
             this.B_ELIMINAR.TabIndex = 9;
@@ -130,23 +139,104 @@
             this.B_ELIMINAR.UseVisualStyleBackColor = true;
             this.B_ELIMINAR.Click += new System.EventHandler(this.B_ELIMINAR_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.L_ELIMINAR);
+            this.panel1.Controls.Add(this.B_ELIMINAR);
+            this.panel1.Controls.Add(this.L_NYA);
+            this.panel1.Controls.Add(this.B_GUARDAR);
+            this.panel1.Controls.Add(this.T_DNI);
+            this.panel1.Controls.Add(this.L_APELLIDO);
+            this.panel1.Controls.Add(this.T_APELLIDO);
+            this.panel1.Controls.Add(this.L_NOMBRE);
+            this.panel1.Controls.Add(this.T_NOMBRE);
+            this.panel1.Controls.Add(this.L_DNI);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel1.Location = new System.Drawing.Point(23, 52);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(253, 256);
+            this.panel1.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(370, 65);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // RB_HOMBRE
+            // 
+            this.RB_HOMBRE.AutoSize = true;
+            this.RB_HOMBRE.Checked = true;
+            this.RB_HOMBRE.Location = new System.Drawing.Point(336, 150);
+            this.RB_HOMBRE.Name = "RB_HOMBRE";
+            this.RB_HOMBRE.Size = new System.Drawing.Size(62, 17);
+            this.RB_HOMBRE.TabIndex = 12;
+            this.RB_HOMBRE.TabStop = true;
+            this.RB_HOMBRE.Text = "Hombre";
+            this.RB_HOMBRE.UseVisualStyleBackColor = true;
+            // 
+            // RB_MUJER
+            // 
+            this.RB_MUJER.AutoSize = true;
+            this.RB_MUJER.Location = new System.Drawing.Point(453, 150);
+            this.RB_MUJER.Name = "RB_MUJER";
+            this.RB_MUJER.Size = new System.Drawing.Size(51, 17);
+            this.RB_MUJER.TabIndex = 13;
+            this.RB_MUJER.Text = "Mujer";
+            this.RB_MUJER.UseVisualStyleBackColor = true;
+            // 
+            // CB_NARANJA
+            // 
+            this.CB_NARANJA.AutoSize = true;
+            this.CB_NARANJA.Location = new System.Drawing.Point(336, 210);
+            this.CB_NARANJA.Name = "CB_NARANJA";
+            this.CB_NARANJA.Size = new System.Drawing.Size(63, 17);
+            this.CB_NARANJA.TabIndex = 14;
+            this.CB_NARANJA.Text = "Naranja";
+            this.CB_NARANJA.UseVisualStyleBackColor = true;
+            // 
+            // CB_VISA
+            // 
+            this.CB_VISA.AutoSize = true;
+            this.CB_VISA.Location = new System.Drawing.Point(336, 244);
+            this.CB_VISA.Name = "CB_VISA";
+            this.CB_VISA.Size = new System.Drawing.Size(46, 17);
+            this.CB_VISA.TabIndex = 15;
+            this.CB_VISA.Text = "Visa";
+            this.CB_VISA.UseVisualStyleBackColor = true;
+            // 
+            // CB_MASTERCARD
+            // 
+            this.CB_MASTERCARD.AutoSize = true;
+            this.CB_MASTERCARD.Location = new System.Drawing.Point(336, 275);
+            this.CB_MASTERCARD.Name = "CB_MASTERCARD";
+            this.CB_MASTERCARD.Size = new System.Drawing.Size(79, 17);
+            this.CB_MASTERCARD.TabIndex = 16;
+            this.CB_MASTERCARD.Text = "Mastercard";
+            this.CB_MASTERCARD.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 361);
-            this.Controls.Add(this.B_ELIMINAR);
-            this.Controls.Add(this.B_GUARDAR);
-            this.Controls.Add(this.T_APELLIDO);
-            this.Controls.Add(this.T_NOMBRE);
-            this.Controls.Add(this.T_DNI);
-            this.Controls.Add(this.L_ELIMINAR);
-            this.Controls.Add(this.L_NYA);
-            this.Controls.Add(this.L_APELLIDO);
-            this.Controls.Add(this.L_NOMBRE);
-            this.Controls.Add(this.L_DNI);
+            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.CB_MASTERCARD);
+            this.Controls.Add(this.CB_VISA);
+            this.Controls.Add(this.CB_NARANJA);
+            this.Controls.Add(this.RB_MUJER);
+            this.Controls.Add(this.RB_HOMBRE);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Pequeño formulario";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,11 +249,18 @@
         private System.Windows.Forms.Label L_APELLIDO;
         private System.Windows.Forms.Label L_NYA;
         private System.Windows.Forms.Label L_ELIMINAR;
-        private System.Windows.Forms.TextBox T_DNI;
         private System.Windows.Forms.TextBox T_NOMBRE;
         private System.Windows.Forms.TextBox T_APELLIDO;
         private System.Windows.Forms.Button B_GUARDAR;
         private System.Windows.Forms.Button B_ELIMINAR;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox T_DNI;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RadioButton RB_HOMBRE;
+        private System.Windows.Forms.RadioButton RB_MUJER;
+        private System.Windows.Forms.CheckBox CB_NARANJA;
+        private System.Windows.Forms.CheckBox CB_VISA;
+        private System.Windows.Forms.CheckBox CB_MASTERCARD;
     }
 }
 
