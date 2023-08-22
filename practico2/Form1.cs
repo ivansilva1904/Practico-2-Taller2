@@ -91,5 +91,12 @@ namespace practico2
                 L_ELIMINAR.Text = "Modificar";
             }
         }
+
+        private void RB_HOMBRE_CheckedChanged(object sender, EventArgs e)
+        {
+            PictureBox elemento = PB_H_M;
+
+
+        }
     }
 }

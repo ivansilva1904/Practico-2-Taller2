@@ -36,17 +36,17 @@
             this.T_DNI = new System.Windows.Forms.TextBox();
             this.T_NOMBRE = new System.Windows.Forms.TextBox();
             this.T_APELLIDO = new System.Windows.Forms.TextBox();
-            this.B_GUARDAR = new System.Windows.Forms.Button();
-            this.B_ELIMINAR = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.RB_HOMBRE = new System.Windows.Forms.RadioButton();
             this.RB_MUJER = new System.Windows.Forms.RadioButton();
             this.CB_NARANJA = new System.Windows.Forms.CheckBox();
             this.CB_VISA = new System.Windows.Forms.CheckBox();
             this.CB_MASTERCARD = new System.Windows.Forms.CheckBox();
+            this.B_ELIMINAR = new System.Windows.Forms.Button();
+            this.B_GUARDAR = new System.Windows.Forms.Button();
+            this.PB_H_M = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_H_M)).BeginInit();
             this.SuspendLayout();
             // 
             // L_DNI
@@ -119,34 +119,12 @@
             this.T_APELLIDO.TabIndex = 7;
             this.T_APELLIDO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.T_APELLIDO_KeyPress);
             // 
-            // B_GUARDAR
-            // 
-            this.B_GUARDAR.Location = new System.Drawing.Point(24, 216);
-            this.B_GUARDAR.Name = "B_GUARDAR";
-            this.B_GUARDAR.Size = new System.Drawing.Size(75, 23);
-            this.B_GUARDAR.TabIndex = 8;
-            this.B_GUARDAR.Text = "Guardar";
-            this.B_GUARDAR.UseVisualStyleBackColor = true;
-            this.B_GUARDAR.Click += new System.EventHandler(this.B_GUARDAR_Click);
-            // 
-            // B_ELIMINAR
-            // 
-            this.B_ELIMINAR.Location = new System.Drawing.Point(151, 216);
-            this.B_ELIMINAR.Name = "B_ELIMINAR";
-            this.B_ELIMINAR.Size = new System.Drawing.Size(75, 23);
-            this.B_ELIMINAR.TabIndex = 9;
-            this.B_ELIMINAR.Text = "Eliminar";
-            this.B_ELIMINAR.UseVisualStyleBackColor = true;
-            this.B_ELIMINAR.Click += new System.EventHandler(this.B_ELIMINAR_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.L_ELIMINAR);
-            this.panel1.Controls.Add(this.B_ELIMINAR);
             this.panel1.Controls.Add(this.L_NYA);
-            this.panel1.Controls.Add(this.B_GUARDAR);
             this.panel1.Controls.Add(this.T_DNI);
             this.panel1.Controls.Add(this.L_APELLIDO);
             this.panel1.Controls.Add(this.T_APELLIDO);
@@ -154,35 +132,28 @@
             this.panel1.Controls.Add(this.T_NOMBRE);
             this.panel1.Controls.Add(this.L_DNI);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(23, 52);
+            this.panel1.Location = new System.Drawing.Point(38, 26);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(253, 256);
             this.panel1.TabIndex = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(370, 65);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
             // 
             // RB_HOMBRE
             // 
             this.RB_HOMBRE.AutoSize = true;
             this.RB_HOMBRE.Checked = true;
-            this.RB_HOMBRE.Location = new System.Drawing.Point(336, 150);
+            this.RB_HOMBRE.Location = new System.Drawing.Point(351, 139);
             this.RB_HOMBRE.Name = "RB_HOMBRE";
             this.RB_HOMBRE.Size = new System.Drawing.Size(62, 17);
             this.RB_HOMBRE.TabIndex = 12;
             this.RB_HOMBRE.TabStop = true;
             this.RB_HOMBRE.Text = "Hombre";
             this.RB_HOMBRE.UseVisualStyleBackColor = true;
+            this.RB_HOMBRE.CheckedChanged += new System.EventHandler(this.RB_HOMBRE_CheckedChanged);
             // 
             // RB_MUJER
             // 
             this.RB_MUJER.AutoSize = true;
-            this.RB_MUJER.Location = new System.Drawing.Point(453, 150);
+            this.RB_MUJER.Location = new System.Drawing.Point(469, 139);
             this.RB_MUJER.Name = "RB_MUJER";
             this.RB_MUJER.Size = new System.Drawing.Size(51, 17);
             this.RB_MUJER.TabIndex = 13;
@@ -192,7 +163,7 @@
             // CB_NARANJA
             // 
             this.CB_NARANJA.AutoSize = true;
-            this.CB_NARANJA.Location = new System.Drawing.Point(336, 210);
+            this.CB_NARANJA.Location = new System.Drawing.Point(351, 184);
             this.CB_NARANJA.Name = "CB_NARANJA";
             this.CB_NARANJA.Size = new System.Drawing.Size(63, 17);
             this.CB_NARANJA.TabIndex = 14;
@@ -202,7 +173,7 @@
             // CB_VISA
             // 
             this.CB_VISA.AutoSize = true;
-            this.CB_VISA.Location = new System.Drawing.Point(336, 244);
+            this.CB_VISA.Location = new System.Drawing.Point(351, 218);
             this.CB_VISA.Name = "CB_VISA";
             this.CB_VISA.Size = new System.Drawing.Size(46, 17);
             this.CB_VISA.TabIndex = 15;
@@ -212,12 +183,47 @@
             // CB_MASTERCARD
             // 
             this.CB_MASTERCARD.AutoSize = true;
-            this.CB_MASTERCARD.Location = new System.Drawing.Point(336, 275);
+            this.CB_MASTERCARD.Location = new System.Drawing.Point(351, 249);
             this.CB_MASTERCARD.Name = "CB_MASTERCARD";
             this.CB_MASTERCARD.Size = new System.Drawing.Size(79, 17);
             this.CB_MASTERCARD.TabIndex = 16;
             this.CB_MASTERCARD.Text = "Mastercard";
             this.CB_MASTERCARD.UseVisualStyleBackColor = true;
+            // 
+            // B_ELIMINAR
+            // 
+            this.B_ELIMINAR.Image = global::practico2.Properties.Resources.eliminar2;
+            this.B_ELIMINAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.B_ELIMINAR.Location = new System.Drawing.Point(336, 299);
+            this.B_ELIMINAR.Name = "B_ELIMINAR";
+            this.B_ELIMINAR.Size = new System.Drawing.Size(105, 50);
+            this.B_ELIMINAR.TabIndex = 9;
+            this.B_ELIMINAR.Text = "Eliminar";
+            this.B_ELIMINAR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.B_ELIMINAR.UseVisualStyleBackColor = true;
+            this.B_ELIMINAR.Click += new System.EventHandler(this.B_ELIMINAR_Click);
+            // 
+            // B_GUARDAR
+            // 
+            this.B_GUARDAR.Image = global::practico2.Properties.Resources.guardar2;
+            this.B_GUARDAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.B_GUARDAR.Location = new System.Drawing.Point(131, 299);
+            this.B_GUARDAR.Name = "B_GUARDAR";
+            this.B_GUARDAR.Size = new System.Drawing.Size(105, 50);
+            this.B_GUARDAR.TabIndex = 8;
+            this.B_GUARDAR.Text = "Guardar";
+            this.B_GUARDAR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.B_GUARDAR.UseVisualStyleBackColor = true;
+            this.B_GUARDAR.Click += new System.EventHandler(this.B_GUARDAR_Click);
+            // 
+            // PB_H_M
+            // 
+            this.PB_H_M.Location = new System.Drawing.Point(382, 26);
+            this.PB_H_M.Name = "PB_H_M";
+            this.PB_H_M.Size = new System.Drawing.Size(100, 92);
+            this.PB_H_M.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PB_H_M.TabIndex = 11;
+            this.PB_H_M.TabStop = false;
             // 
             // Form1
             // 
@@ -226,17 +232,19 @@
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.CB_MASTERCARD);
+            this.Controls.Add(this.B_ELIMINAR);
             this.Controls.Add(this.CB_VISA);
             this.Controls.Add(this.CB_NARANJA);
+            this.Controls.Add(this.B_GUARDAR);
             this.Controls.Add(this.RB_MUJER);
             this.Controls.Add(this.RB_HOMBRE);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PB_H_M);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Pequeño formulario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_H_M)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,7 +263,7 @@
         private System.Windows.Forms.Button B_ELIMINAR;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox T_DNI;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PB_H_M;
         private System.Windows.Forms.RadioButton RB_HOMBRE;
         private System.Windows.Forms.RadioButton RB_MUJER;
         private System.Windows.Forms.CheckBox CB_NARANJA;
