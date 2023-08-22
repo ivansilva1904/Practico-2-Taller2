@@ -37,6 +37,8 @@
             this.T_NOMBRE = new System.Windows.Forms.TextBox();
             this.T_APELLIDO = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.T_TELEFONO = new System.Windows.Forms.TextBox();
+            this.L_TELEFONO = new System.Windows.Forms.Label();
             this.RB_HOMBRE = new System.Windows.Forms.RadioButton();
             this.RB_MUJER = new System.Windows.Forms.RadioButton();
             this.CB_NARANJA = new System.Windows.Forms.CheckBox();
@@ -55,27 +57,27 @@
             this.L_DNI.AutoSize = true;
             this.L_DNI.Location = new System.Drawing.Point(21, 87);
             this.L_DNI.Name = "L_DNI";
-            this.L_DNI.Size = new System.Drawing.Size(26, 13);
+            this.L_DNI.Size = new System.Drawing.Size(33, 13);
             this.L_DNI.TabIndex = 0;
-            this.L_DNI.Text = "DNI";
+            this.L_DNI.Text = "* DNI";
             // 
             // L_NOMBRE
             // 
             this.L_NOMBRE.AutoSize = true;
             this.L_NOMBRE.Location = new System.Drawing.Point(21, 130);
             this.L_NOMBRE.Name = "L_NOMBRE";
-            this.L_NOMBRE.Size = new System.Drawing.Size(44, 13);
+            this.L_NOMBRE.Size = new System.Drawing.Size(51, 13);
             this.L_NOMBRE.TabIndex = 1;
-            this.L_NOMBRE.Text = "Nombre";
+            this.L_NOMBRE.Text = "* Nombre";
             // 
             // L_APELLIDO
             // 
             this.L_APELLIDO.AutoSize = true;
             this.L_APELLIDO.Location = new System.Drawing.Point(21, 175);
             this.L_APELLIDO.Name = "L_APELLIDO";
-            this.L_APELLIDO.Size = new System.Drawing.Size(44, 13);
+            this.L_APELLIDO.Size = new System.Drawing.Size(51, 13);
             this.L_APELLIDO.TabIndex = 2;
-            this.L_APELLIDO.Text = "Apellido";
+            this.L_APELLIDO.Text = "* Apellido";
             // 
             // L_NYA
             // 
@@ -124,6 +126,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.T_TELEFONO);
+            this.panel1.Controls.Add(this.L_TELEFONO);
             this.panel1.Controls.Add(this.L_ELIMINAR);
             this.panel1.Controls.Add(this.L_NYA);
             this.panel1.Controls.Add(this.T_DNI);
@@ -137,6 +141,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(253, 256);
             this.panel1.TabIndex = 10;
+            // 
+            // T_TELEFONO
+            // 
+            this.T_TELEFONO.Location = new System.Drawing.Point(137, 215);
+            this.T_TELEFONO.Name = "T_TELEFONO";
+            this.T_TELEFONO.Size = new System.Drawing.Size(100, 20);
+            this.T_TELEFONO.TabIndex = 9;
+            this.T_TELEFONO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.T_TELEFONO_KeyPress);
+            // 
+            // L_TELEFONO
+            // 
+            this.L_TELEFONO.AutoSize = true;
+            this.L_TELEFONO.Location = new System.Drawing.Point(21, 218);
+            this.L_TELEFONO.Name = "L_TELEFONO";
+            this.L_TELEFONO.Size = new System.Drawing.Size(49, 13);
+            this.L_TELEFONO.TabIndex = 8;
+            this.L_TELEFONO.Text = "Telefono";
             // 
             // RB_HOMBRE
             // 
@@ -286,6 +307,8 @@
         private System.Windows.Forms.CheckBox CB_VISA;
         private System.Windows.Forms.CheckBox CB_MASTERCARD;
         private System.Windows.Forms.Button B_SALIR;
+        private System.Windows.Forms.TextBox T_TELEFONO;
+        private System.Windows.Forms.Label L_TELEFONO;
     }
 }
 

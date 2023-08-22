@@ -8,3 +8,4 @@ C:\Users\ivans\source\repos\practico2\practico2\obj\Debug\practico2.csproj.Gener
 C:\Users\ivans\source\repos\practico2\practico2\obj\Debug\practico2.csproj.CoreCompileInputs.cache
 C:\Users\ivans\source\repos\practico2\practico2\obj\Debug\practico2.exe
 C:\Users\ivans\source\repos\practico2\practico2\obj\Debug\practico2.pdb
+C:\Users\ivans\source\repos\practico2\practico2\obj\Debug\practico2.MDIParent1.resources

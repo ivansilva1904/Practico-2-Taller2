@@ -88,6 +88,7 @@ namespace practico2
                 T_DNI.Clear();
                 T_NOMBRE.Clear();
                 T_APELLIDO.Clear();
+                T_TELEFONO.Clear();
                 L_ELIMINAR.Text = "Modificar";
             }
         }
@@ -112,6 +113,14 @@ namespace practico2
         private void B_SALIR_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void T_TELEFONO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
