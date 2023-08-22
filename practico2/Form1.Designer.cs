@@ -42,6 +42,7 @@
             this.CB_NARANJA = new System.Windows.Forms.CheckBox();
             this.CB_VISA = new System.Windows.Forms.CheckBox();
             this.CB_MASTERCARD = new System.Windows.Forms.CheckBox();
+            this.B_SALIR = new System.Windows.Forms.Button();
             this.B_ELIMINAR = new System.Windows.Forms.Button();
             this.B_GUARDAR = new System.Windows.Forms.Button();
             this.PB_H_M = new System.Windows.Forms.PictureBox();
@@ -190,11 +191,24 @@
             this.CB_MASTERCARD.Text = "Mastercard";
             this.CB_MASTERCARD.UseVisualStyleBackColor = true;
             // 
+            // B_SALIR
+            // 
+            this.B_SALIR.Image = global::practico2.Properties.Resources.salir2;
+            this.B_SALIR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.B_SALIR.Location = new System.Drawing.Point(469, 299);
+            this.B_SALIR.Name = "B_SALIR";
+            this.B_SALIR.Size = new System.Drawing.Size(80, 50);
+            this.B_SALIR.TabIndex = 17;
+            this.B_SALIR.Text = "Salir";
+            this.B_SALIR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.B_SALIR.UseVisualStyleBackColor = true;
+            this.B_SALIR.Click += new System.EventHandler(this.B_SALIR_Click);
+            // 
             // B_ELIMINAR
             // 
             this.B_ELIMINAR.Image = global::practico2.Properties.Resources.eliminar2;
             this.B_ELIMINAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.B_ELIMINAR.Location = new System.Drawing.Point(336, 299);
+            this.B_ELIMINAR.Location = new System.Drawing.Point(186, 299);
             this.B_ELIMINAR.Name = "B_ELIMINAR";
             this.B_ELIMINAR.Size = new System.Drawing.Size(105, 50);
             this.B_ELIMINAR.TabIndex = 9;
@@ -207,7 +221,7 @@
             // 
             this.B_GUARDAR.Image = global::practico2.Properties.Resources.guardar2;
             this.B_GUARDAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.B_GUARDAR.Location = new System.Drawing.Point(131, 299);
+            this.B_GUARDAR.Location = new System.Drawing.Point(38, 299);
             this.B_GUARDAR.Name = "B_GUARDAR";
             this.B_GUARDAR.Size = new System.Drawing.Size(105, 50);
             this.B_GUARDAR.TabIndex = 8;
@@ -218,10 +232,11 @@
             // 
             // PB_H_M
             // 
-            this.PB_H_M.Location = new System.Drawing.Point(382, 26);
+            this.PB_H_M.Image = global::practico2.Properties.Resources.hombre;
+            this.PB_H_M.Location = new System.Drawing.Point(382, 21);
             this.PB_H_M.Name = "PB_H_M";
-            this.PB_H_M.Size = new System.Drawing.Size(100, 92);
-            this.PB_H_M.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PB_H_M.Size = new System.Drawing.Size(100, 107);
+            this.PB_H_M.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_H_M.TabIndex = 11;
             this.PB_H_M.TabStop = false;
             // 
@@ -231,6 +246,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.B_SALIR);
             this.Controls.Add(this.CB_MASTERCARD);
             this.Controls.Add(this.B_ELIMINAR);
             this.Controls.Add(this.CB_VISA);
@@ -269,6 +285,7 @@
         private System.Windows.Forms.CheckBox CB_NARANJA;
         private System.Windows.Forms.CheckBox CB_VISA;
         private System.Windows.Forms.CheckBox CB_MASTERCARD;
+        private System.Windows.Forms.Button B_SALIR;
     }
 }
 

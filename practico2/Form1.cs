@@ -94,9 +94,24 @@ namespace practico2
 
         private void RB_HOMBRE_CheckedChanged(object sender, EventArgs e)
         {
-            PictureBox elemento = PB_H_M;
+            RadioButton estadoBoton = RB_HOMBRE;
+            PictureBox fotoUsuario = PB_H_M;
 
+            if(estadoBoton.Checked == true)
+            {
+                fotoUsuario.Image = practico2.Properties.Resources.hombre;
+                fotoUsuario.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                fotoUsuario.Image = practico2.Properties.Resources.mujer;
+                fotoUsuario.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
 
+        private void B_SALIR_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
