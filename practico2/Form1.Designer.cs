@@ -279,6 +279,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Pequeño formulario";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_H_M)).EndInit();

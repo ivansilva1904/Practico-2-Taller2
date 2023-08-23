@@ -12,8 +12,6 @@ namespace practico2
 {
     public partial class MDIParent1 : Form
     {
-        private int childFormNumber = 0;
-
         public MDIParent1()
         {
             InitializeComponent();
@@ -21,9 +19,8 @@ namespace practico2
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
+            Form childForm = new Form1();
             childForm.MdiParent = this;
-            childForm.Text = "Ventana " + childFormNumber++;
             childForm.Show();
         }
 
