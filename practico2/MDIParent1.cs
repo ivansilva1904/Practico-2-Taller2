@@ -12,6 +12,7 @@ namespace practico2
 {
     public partial class MDIParent1 : Form
     {
+        int ventanaNumero = 0;
         public MDIParent1()
         {
             InitializeComponent();
@@ -19,9 +20,14 @@ namespace practico2
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form1();
-            childForm.MdiParent = this;
-            childForm.Show();
+            if(ventanaNumero == 0)
+            {
+                Form childForm = new Form1();
+                childForm.MdiParent = this;
+                childForm.Show();
+
+                ventanaNumero++;
+            }
         }
 
         private void OpenFile(object sender, EventArgs e)
